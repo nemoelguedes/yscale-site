@@ -1,0 +1,138 @@
+@import "../../../styles/Styles.module.scss";
+
+.control {
+  font-size: 1em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 8px;
+    
+  }
+}
+
+
+
+.control__next--active {
+  color: $branco;
+  background-color: $roxo;
+  border: 2px $roxo solid;
+  transition: 200ms;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.control__next--inactive {
+  color: rgba($color: $cinza, $alpha: 0.2);
+  background-color: rgba($color: $cinza, $alpha: 0.1);
+  border: 2px rgba($color: $cinza, $alpha: 0.2) solid;
+  margin-left: 10px;
+}
+
+.control__next--active:hover {
+  transition: 200ms;
+  transform: scale(1.1);
+  background-color: $roxo2;
+}
+
+
+.control__previous--active {
+  color: $roxo;
+  background-color: $cinzaclaro;
+  border: 2px $roxo solid;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.control__previous--inactive {
+  color: rgba($color: $cinza, $alpha: 0.2);
+  background-color: rgba($color: $cinza, $alpha: 0.1);
+  border: 2px rgba($color: $cinza, $alpha: 0.2) solid;
+}
+
+.control__previous--active:hover {
+  transition: 200ms;
+  transform: scale(1.1);
+  background-color: $cinzaclaro;
+}
+
+
+.control__finish--active {
+  color: $azulmarinho;
+  background-color: $verde;
+  border: 2px $verde solid;
+  transition: 200ms;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.control__finish--inactive {
+  color: rgba($color: $cinza, $alpha: 0.2);
+  background-color: rgba($color: $cinza, $alpha: 0.1);
+  border: 2px rgba($color: $cinza, $alpha: 0.2) solid;
+  margin-left: 10px;
+}
+
+.control__finish--active:hover {
+  transition: 200ms;
+  transform: scale(1.1);
+  background-color: $verde;
+}
+
+.control__remove--active {
+  color: $branco;
+  background-color: $azulmarinho;
+  border: 2px $azulmarinho solid;
+  transition: 200ms;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.control__remove--inactive {
+  color: rgba($color: $cinza, $alpha: 0.2);
+  background-color: rgba($color: $cinza, $alpha: 0.1);
+  border: 2px rgba($color: $cinza, $alpha: 0.2) solid;
+  margin-left: 10px;
+}
+
+.control__remove--active:hover {
+  transition: 200ms;
+  transform: scale(1.1);
+  background-color: $azulmarinho;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.icon__noText {
+  width: 16px;
+  height: 16px;
+}
+
+.control__checkpoint--active {
+  color: $azulmarinho;
+  background-color: $verdemeio;
+  border: 2px $verdemeio solid;
+  transition: 200ms;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.control__checkpoint--inactive {
+  color: rgba($color: $branco, $alpha: 0.2);
+  background-color: rgba($color: $branco, $alpha: 0.1);
+  border: 0px;
+  margin-left: 10px;
+}
+
+.control__checkpoint--active:hover {
+  transition: 200ms;
+  transform: scale(1.1);
+  background-color: $verdemeio;
+}

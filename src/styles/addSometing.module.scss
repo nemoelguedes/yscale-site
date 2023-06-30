@@ -1,0 +1,77 @@
+@import "./Styles.module.scss";
+
+
+.section{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+
+.view{
+  width: calc(30% - 64px);
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  background: $roxo;
+  background: linear-gradient(45deg, rgba(117,81,217,1) 50%, rgba(98,176,211,1) 100%);
+  min-height: calc(100vh - 64px);
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.2);
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 32px);
+    padding: 16px;
+    min-height: 100px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+
+.content{
+  width: calc(70% - 60px);
+  padding: 15px;
+  margin-left: 10px;
+  min-height: calc(100vh - 30px);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.1);
+  align-items: center;
+  background-color: $branco;
+  flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 32px);
+    padding: 16px;
+    min-height: 70vh;
+    margin: 0;
+  }
+}
+
+.printObjective{
+  width: 100%;
+  font-size: 1.6em;
+  color: $branco;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.item{
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
+  color: $verde;
+}
