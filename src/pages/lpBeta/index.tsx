@@ -3,13 +3,19 @@ import stylePages from "styles/pages.module.scss";
 import Menu from "components/menu";
 import classNames from "classnames";
 import { baseURL } from "baseURL";
-import { FaArrowRight, FaDashcube } from "react-icons/fa";
+import { FaChartBar, FaChartLine, FaChartPie } from "react-icons/fa";
+import LPForm from "components/forms/lpForm";
+import { useRef } from "react";
 
 export default function LPBeta() {
 
-  const convert = () => {
+  const formRef = useRef<HTMLDivElement>(null);
 
-  }
+  const convert = () => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
 
   return (<>
@@ -19,13 +25,13 @@ export default function LPBeta() {
         <Menu />
       </div>
 
-      <div className={stylePages.container__vertical}>
+      <div className={style.container__vertical}>
 
         {/* TITLE */}
-        <div className={style.title}>Comunique seus Objetivos,<br />Inspire seu Time e Escale <br />os Resultados.</div>
+        <div className={style.title}>Comunique seus Objetivos,<br className={style.br__mobile} /> Inspire seu Time e Escale <br className={style.br__mobile} />os Resultados.</div>
 
         {/* SUBTITLE */}
-        <div className={style.subtitle}>Gerencie de forma simples e intuitiva, comunique com<br /> transparência os objetivos da empresa e alcance o sucesso.</div>
+        <div className={style.subtitle}>Gerencie de forma simples e intuitiva, comunique com<br className={style.br__mobile} /> transparência os objetivos da empresa e alcance o sucesso.</div>
 
         {/* BUTTON */}
         <div className={style.item}>
@@ -43,21 +49,24 @@ export default function LPBeta() {
         <div className={style.item}>
           [Versão Beta]
         </div>
+
+        <div className={style.item}>
+          <img className={style.header__image} src={baseURL + "/assets/tela1.png"} alt="" />
+        </div>
+
       </div>
 
     </header>
     <section className={style.aboutUs}>
-      <div className={style.container__horizontal}>
+      <div className={style.container__vertical}>
 
-        <div className={style.aboutUs__content}>
-          <img className={style.aboutUs__image} src={baseURL + "/assets/placeholder.png"} alt="" />
+        <div className={style.aboutUs__title}>Sobre nós</div>
+        <div className={style.aboutUs__text}>
+          Somos uma solução <b className={style.verde}>B2L [Business to Leaders]</b>, ajudamos líderes de pequenas empresas de tecnologia, adeptos da metodologia OKR, que ainda não estão escalando seus resultados.<br /><br />Apresentamos a <b className={style.verde}>Yscale OKR Platform</b>, uma ferramenta projetada para simplificar a comunicação de objetivos e inspirar os colaboradores a alcançarem o máximo de seu potencial.<br /><br />Imagine-nos como o seu GPS para o crescimento, orientando sua equipe de maneira simples, intuitiva e inspiradora rumo ao sucesso."
         </div>
-        <div className={style.aboutUs__content}>
-          <div className={style.aboutUs__title}>Sobre nós</div>
-          <div className={style.aboutUs__text}>
-            Somos uma solução <b className={style.verde}>B2L [Business to Leaders]</b>, ajudamos líderes de pequenas empresas de tecnologia, adeptos da metodologia OKR, que ainda não estão escalando seus resultados.<br /><br />Apresentamos a <b className={style.verde}>Yscale OKR Platform</b>, uma ferramenta projetada para simplificar a comunicação de objetivos e inspirar os colaboradores a alcançarem o máximo de seu potencial.<br /><br />Imagine-nos como o seu GPS para o crescimento, orientando sua equipe de maneira simples, intuitiva e inspiradora rumo ao sucesso."
-          </div>
-        </div>
+
+        <div className={style.aboutUs__title}>Dados que importam</div>
+
 
       </div>
 
@@ -66,7 +75,7 @@ export default function LPBeta() {
       <div className={style.container__horizontal}>
         <div className={style.aboutUs__content}>
 
-          <div className={style.aboutUs__title}>Dados que importam</div>
+
 
           {/* ITEM 1 */}
 
@@ -76,7 +85,7 @@ export default function LPBeta() {
               [style["features__iconArea--verde"]]: true,
             })
             }>
-              <FaArrowRight className={style.features__icon} />
+              <FaChartPie className={style.features__icon} />
             </div>
             <div className={style.features__content}>
               <div className={style.features__itemTitle}>
@@ -91,12 +100,12 @@ export default function LPBeta() {
           {/* ITEM 2 */}
 
           <div className={style.features__item}>
-          <div className={classNames({
+            <div className={classNames({
               [style.features__iconArea]: true,
               [style["features__iconArea--azul"]]: true,
             })
             }>
-              <FaArrowRight className={style.features__icon} />
+              <FaChartBar className={style.features__icon} />
             </div>
             <div className={style.features__content}>
               <div className={style.features__itemTitle}>
@@ -111,12 +120,12 @@ export default function LPBeta() {
           {/* ITEM 3 */}
 
           <div className={style.features__item}>
-          <div className={classNames({
+            <div className={classNames({
               [style.features__iconArea]: true,
               [style["features__iconArea--roxo"]]: true,
             })
             }>
-              <FaArrowRight className={style.features__icon} />
+              <FaChartLine className={style.features__icon} />
             </div>
             <div className={style.features__content}>
               <div className={style.features__itemTitle}>
@@ -132,22 +141,37 @@ export default function LPBeta() {
 
         </div>
 
-        <div className={style.aboutUs__content}>
-          <img className={style.aboutUs__image} src={baseURL + "/assets/placeholder.png"} alt="" />
+        <div className={style.dash__content}>
+          <img className={style.dash__image1} src={baseURL + "/assets/dash1.png"} alt="" />
+          <img className={style.dash__image2} src={baseURL + "/assets/dash2.png"} alt="" />
+          <img className={style.dash__image3} src={baseURL + "/assets/dash3.png"} alt="" />
+          <img className={style.dash__image4} src={baseURL + "/assets/dash4.png"} alt="" />
         </div>
       </div>
     </section>
 
-    <div className={stylePages.container}>
-      <section className={style.section}>
-        Estamos em Beta, rode seu próximo ciclo OKR de até 3 meses conosco gratuitamente.<br /><br />
-
-        dados do form: nome, email, telefone/whatsapp; empresa; cargo, departamento, número de líderes na empresa<br /><br />
-        [no rodapé] *período teste de 3 meses, com limite de até 10 líderes por empresa
+    <section className={style.form} ref={formRef}>
+      <div className={style.container__horizontal}>
 
 
-      </section>
-    </div>
+        <div className={style.aboutUs__content}>
+          <div className={style.aboutUs__title}>Impulsione seu time</div>
+          <div className={style.aboutUs__text}>
+
+            <LPForm />
+            <br />
+
+            <div className={style.item}>
+              * Período teste de 3 meses.<br />
+              ** Limite de até 10 líderes por empresa.<br />
+              *** Consultar Disponibilidade.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section >
   </>
 
   );

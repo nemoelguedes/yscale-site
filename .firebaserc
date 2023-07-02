@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "yscaleokr"
-  }
+    "default": "yscale-site",
+    "yscale-site": "yscale-site"
+  },
+  "targets": {},
+  "etags": {}
 }
